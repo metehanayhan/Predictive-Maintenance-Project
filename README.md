@@ -24,7 +24,7 @@ This project aims to develop a predictive maintenance model for a delivery compa
    - The RandomForestClassifier was selected as the final model due to its high accuracy of 99.97%.
 
 6. **Evaluation:**
-   - Evaluated the model using accuracy, confusion matrix, and ROC-AUC score to ensure robust performance.
+   - Evaluated the model using accuracy, confusion matrix to ensure robust performance.
    - The final model demonstrated exceptional performance with an accuracy of 99.96% in predicting equipment failures.
 
 ## Dataset Description
@@ -43,5 +43,3 @@ This project aims to develop a predictive maintenance model for a delivery compa
 ## Results
 Using a RandomForestClassifier, a predictive maintenance model was developed with an accuracy of 99.96%. The model can effectively predict equipment failures, enabling the delivery company to take proactive measures and minimize downtime.
 
-## Conclusion
-This project successfully demonstrates the application of machine learning in predictive maintenance, providing a powerful tool for improving operational efficiency in a delivery company. The techniques used, including handling imbalanced data with SMOTE and model selection, contribute to the model's high performance.
