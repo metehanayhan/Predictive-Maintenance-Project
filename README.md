@@ -1,3 +1,4 @@
+[EN]
 # Predictive Maintenance Project
 
 ## Project Overview
@@ -42,4 +43,59 @@ This project aims to develop a predictive maintenance model for a delivery compa
 
 ## Results
 Using a RandomForestClassifier, a predictive maintenance model was developed with an accuracy of 99.96%. The model can effectively predict equipment failures, enabling the delivery company to take proactive measures and minimize downtime.
+
+[TR]
+# Predictive Maintenance Project
+
+## Proje Özeti
+Bu proje, bir dağıtım şirketi için predictive maintenance modeli geliştirmeyi amaçlamaktadır. Amaç, ekipman arızalarını önceden tahmin ederek zamanında bakım yapılmasını sağlamak ve beklenmeyen duruş sürelerini en aza indirmektir.
+
+---
+
+## Çözümler ve Yöntemler
+
+1. **Exploratory Data Analysis (EDA):** 
+   - Veri seti analiz edilerek değişkenlerin dağılımı incelendi, kalıplar tespit edildi ve dengesizlikler ya da anormallikler belirlendi.
+
+2. **Data Preprocessing:** 
+   - Tarih sütunundan yıl, ay ve gün bilgileri çıkarıldı.
+   - Cihaz kodları sadeleştirilerek ilk harflerinden oluşan bir kategoriye dönüştürüldü ve One-Hot Encoding uygulandı.
+   - Eksik değerler temizlendi ve yüksek kaliteli bir veri seti oluşturuldu.
+
+3. **Feature Engineering:** 
+   - Tarih sütunundan türetilen yıl, ay ve gün gibi yeni özellikler oluşturuldu.
+   - Cihaz kodları gibi kategorik değişkenler, makine öğrenimi algoritmalarına uygun hale getirilmek için One-Hot Encoding ile işlendi.
+
+4. **Handling Imbalanced Data:** 
+   - Veri setindeki dengesizlikler, SMOTE (Synthetic Minority Over-sampling Technique) yöntemi kullanılarak giderildi. Böylece arıza durumları yeterince temsil edilebildi.
+
+5. **Model Selection and Training:** 
+   - Logistic Regression, K-Nearest Neighbors, Random Forest, Naive Bayes ve Decision Tree gibi çeşitli sınıflandırma modelleri test edildi.
+   - RandomForestClassifier, %99.97 doğruluk oranıyla en iyi model olarak seçildi.
+
+6. **Evaluation:**
+   - Modelin performansı, accuracy ve confusion matrix gibi metriklerle değerlendirildi.
+   - Nihai model, %99.96 doğruluk oranıyla ekipman arızalarını başarılı bir şekilde tahmin etti.
+
+---
+
+## Dataset Description
+- **date:** Verinin toplandığı tarih.
+- **device:** Cihaz kodu.
+- **failure:** Cihazın belirtilen tarihte arıza yapıp yapmadığını gösteren binary bir etiket (0 = arıza yok, 1 = arıza var).
+- **attribute1 - attribute9:** Cihazın o tarihteki çeşitli özelliklerini veya sensör ölçümlerini temsil eden sayısal değerler.
+
+---
+
+## Libraries Used
+- **pandas**: Veri işleme ve analiz.
+- **matplotlib** & **seaborn**: Veri görselleştirme.
+- **scikit-learn**: Makine öğrenimi algoritmaları ve model değerlendirme.
+- **imblearn (SMOTE):** Veri dengesizliklerini giderme.
+- **warnings**: Temiz çıktı için uyarıları bastırma.
+
+---
+
+## Results
+RandomForestClassifier kullanılarak, %99.96 doğruluk oranına sahip bir predictive maintenance modeli geliştirilmiştir. Bu model, ekipman arızalarını etkin bir şekilde tahmin ederek dağıtım şirketinin proaktif önlemler almasını ve duruş sürelerini en aza indirmesini sağlamaktadır.
 
